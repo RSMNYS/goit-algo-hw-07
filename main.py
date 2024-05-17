@@ -123,17 +123,17 @@ def delete_node(root, key):
 
     return root
 
-def min_value_node(node):
+def min_value(node):
     current = node
     while current.left is not None:
         current = current.left
-    return current
+    return current.key
 
-def max_value_node(node):
+def max_value(node):
     current = node
     while current.right is not None:
         current = current.right
-    return current
+    return current.key
 
 def tree_sum(node):
     if not node:
@@ -152,10 +152,10 @@ for key in keys:
 
 
 # Min value
-print('Min value node:', min_value_node(root))
+print('Min value node:', min_value(root))
 
 # Max value
-print('Min value node:', max_value_node(root))
+print('Min value node:', max_value(root))
 
 # Tree sum
 print('Tree sum:', tree_sum(root))
